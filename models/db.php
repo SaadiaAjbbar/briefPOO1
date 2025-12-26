@@ -53,4 +53,31 @@ class db
         }
         return $books;
     }
+
+    public function getBorrows(){
+         $requete = "SELECT bk.title,u.firstName,br.* FROM books bk JOIN borrows br ON bk.id=br.bookId JOIN users u ON u.id=br.readerId WHERE u.role='reader' and bk.status='borrowed'";
+        $stmt = $this->pdo->prepare($requete);
+        $stmt->execute();
+        $listBorrows=$stmt->fetchAll(PDO::FETCH_ASSOC);
+        $borrows=[];
+        foreach($listBorrows as $borrow){
+            $Br=new Borrow($borrow['id'],$borrow['readerId'],$borrow['bookId'],$borrow['borrowDate'],$borrow['returnDate']);
+            $borrows[] = $Br;
+        }
+        return $borrows;
+    }
+
+   public function getReaders(){
+        $requete = "SELECT * FROM users where role = 'reader'";
+        $stmt = $this->pdo->prepare($requete);
+        $stmt->execute();
+        $listReader=$stmt->fetchAll(PDO::FETCH_ASSOC);
+        $readers=[];
+        foreach($listReader as $reader){
+            $Br=new User($reader['id'],$reader['firstName'],$reader['lastName'],$reader['email'],$reader['password']);
+            $readers[] = $Br;
+        }
+        return $readers;
+    } 
+
 }

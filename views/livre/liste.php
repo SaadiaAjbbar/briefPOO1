@@ -10,7 +10,6 @@
                     <th class="p-3">Année</th>
                     <th class="p-3">Statut</th>
                     <th class="p-3 ">Action</th>
-                    
                 </tr>
             </thead>
 

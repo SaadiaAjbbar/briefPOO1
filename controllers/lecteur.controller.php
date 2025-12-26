@@ -1,5 +1,16 @@
 <?php
 $page ="/lecteur";
-require_once __DIR__ . '/../templates/header.php';
-require_once __DIR__ . '/../views/lecteur/liste.php';
-require_once __DIR__ . '/../templates/footer.php';
+
+require 'models/db.php';
+require 'models/lecteur.php';
+
+$db = new db();
+
+$livres = $db->getReaders();
+
+
+
+
+require 'templates/header.php';
+require 'views/lecteur/liste.php';
+require 'templates/footer.php';

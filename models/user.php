@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/User.php';
 abstract class User {
     protected $id;
     protected $firstName;

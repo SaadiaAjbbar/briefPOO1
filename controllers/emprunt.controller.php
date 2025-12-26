@@ -1,7 +1,14 @@
 <?php
+$page ="/emprunt";
 
-$page = "/emprunt";
+require 'models/db.php';
+require 'models/emprunt.php';
 
-require_once __DIR__ . '/../templates/header.php';
-require_once __DIR__ . '/../views/emprunt/liste.php';
-require_once __DIR__ . '/../templates/footer.php';
+$db = new db();
+
+$borrows = $db->getBorrows();
+
+
+require 'templates/header.php';
+require 'views/emprunt/liste.php';
+require 'templates/footer.php';

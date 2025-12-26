@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Bibliothèque Youcode</title>
-    <link href="/styles.css" rel="stylesheet">
+    <link href="/src/output.css" rel="stylesheet">
 </head>
 
 <body class="bg-gray-50 text-gray-800">

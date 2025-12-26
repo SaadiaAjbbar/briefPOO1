@@ -1,5 +1,16 @@
-class Admin {
-    + addBook(b : Book) : void
-    + updateBook(b : Book) : void
-    + deleteBook(id : int) : void
+<?php
+class Reader extends User{
+    
+    public function __construct($id,$firstName,$lastName,$email,$password)
+    {
+       parent::__construct($id, $firstName,$lastName,$email,$password); 
+    }
+
+    public function borrowBook($bookId){
+
+    }
+    public function returnBook($borrowId){
+        
+    }
+    
 }
