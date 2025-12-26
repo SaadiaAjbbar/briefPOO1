@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Bibliothèque Youcode</title>
+    <link href="/styles.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+<header class="bg-black text-white">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-8">
+        <h1 class="text-3xl font-bold text-[#FA871F]">BibliCode</h1>
+
+        <ul class="flex space-x-6">
+            <li><a href="/home" class="hover:underline">home</a></li>
+            <li><a href="/lecteur" class="hover:underline">Lecteurs</a></li>
+            <li><a href="/livre" class="hover:underline">Livres</a></li>
+            <li><a href="/emprunt" class="hover:underline">Emprunts</a></li>
+        </ul>
+    </nav>
+</header>
