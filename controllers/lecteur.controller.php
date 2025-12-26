@@ -6,7 +6,7 @@ require 'models/lecteur.php';
 
 $db = new db();
 
-$livres = $db->getReaders();
+$readers = $db->getReaders();
 
 
 

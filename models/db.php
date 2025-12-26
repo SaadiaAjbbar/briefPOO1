@@ -74,7 +74,7 @@ class db
         $listReader=$stmt->fetchAll(PDO::FETCH_ASSOC);
         $readers=[];
         foreach($listReader as $reader){
-            $Br=new User($reader['id'],$reader['firstName'],$reader['lastName'],$reader['email'],$reader['password']);
+            $Br=new Reader($reader['id'],$reader['firstName'],$reader['lastName'],$reader['email'],$reader['password']);
             $readers[] = $Br;
         }
         return $readers;

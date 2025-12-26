@@ -1,11 +1,11 @@
 <?php
-require_once __DIR__ . '/User.php';
+
 abstract class User {
-    protected $id;
-    protected $firstName;
-    protected $lastName;
-    protected $email;
-    protected $password;
+    public $id;
+    public $firstName;
+    public $lastName;
+    public $email;
+    public $password;
 
     public function __construct($id,$firstName,$lastName,$email,$password)
     {
